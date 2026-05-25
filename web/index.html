@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="theme-color" content="#f5efe6" id="theme-color" />
+    <meta name="darkreader-lock" />
+    <link rel="manifest" href="/manifest.json" />
+    <script>
+      (function () {
+        var storedTheme = localStorage.getItem("smart-planner.theme");
+        var systemDark = matchMedia("(prefers-color-scheme: dark)").matches;
+        var resolvedTheme =
+          storedTheme === "light" || storedTheme === "dark"
+            ? storedTheme
+            : systemDark
+              ? "dark"
+              : "light";
+        document.documentElement.dataset.theme =
+          resolvedTheme === "dark" ? "dark" : "light";
+        document.documentElement.style.background =
+          resolvedTheme === "dark" ? "#111018" : "#f5efe6";
+      })();
+    </script>
+    <title>Smart Planner — FreeAppStore</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

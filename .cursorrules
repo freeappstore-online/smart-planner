@@ -1,0 +1,8 @@
+See https://freeappstore.online/skills.md for platform conventions.
+Your folder should look like
+smart-planner/
+├── CLAUDE.md
+├── .cursorrules
+├── package.json
+├── pnpm-workspace.yaml
+└── web/

@@ -1,0 +1,27 @@
+{
+  "name": "smart-planner",
+  "private": true,
+  "packageManager": "pnpm@10.30.3",
+  "engines": {
+    "node": ">=22"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freeappstore-online/smart-planner.git"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @smart-planner/web dev",
+    "build": "pnpm --filter @smart-planner/web build",
+    "preview": "pnpm --filter @smart-planner/web preview",
+    "typecheck": "pnpm --filter @smart-planner/web exec tsc -b",
+    "test": "pnpm --filter @smart-planner/web exec tsc -b"
+  },
+  "devDependencies": {
+    "playwright": "^1.60.0"
+  }
+}
