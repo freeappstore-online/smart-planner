@@ -14,13 +14,13 @@ export default defineConfig({
         maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
       },
       manifest: {
-        name: 'Smart Planner',
-        short_name: 'Smart Planner',
-        description: 'Offline-first planner and notes app for FreeAppStore',
+        name: 'Nestora Household Hub',
+        short_name: 'Nestora',
+        description: 'Offline-first household finance and planning hub for FreeAppStore',
         start_url: '/',
         display: 'standalone',
-        background_color: '#f5efe6',
-        theme_color: '#f5efe6',
+        background_color: '#f8fafc',
+        theme_color: '#0f172a',
         orientation: 'any',
         icons: [
           { src: '/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any maskable' },

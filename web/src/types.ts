@@ -1,48 +1,76 @@
 export type ThemeMode = 'system' | 'light' | 'dark'
 
-export type TaskArea = 'Work' | 'Home' | 'Personal' | 'Wellness'
+export type AppSection = 'dashboard' | 'accounts' | 'planner' | 'payments' | 'settings'
 
-export type Priority = 'Low' | 'Medium' | 'High'
+export type AccountType = 'Checking' | 'Savings' | 'Credit Card' | 'Cash'
 
-export interface PlannerTask {
-	id: string
-	title: string
-	note: string
-	due: string
-	area: TaskArea
-	priority: Priority
-	done: boolean
+export type AccountStatus = 'Healthy' | 'Needs Attention' | 'Overdue'
+
+export interface Account {
+  id: string
+  name: string
+  type: AccountType
+  balance: number
+  limit: number
+  paymentDue?: string
+  status: AccountStatus
+  institution?: string
+  usage: number
+  color: string
 }
 
-export interface PlannerHabit {
-	id: string
-	title: string
-	cadence: string
-	streak: number
-	doneToday: boolean
+export type PlannerItemType = 'Shopping' | 'Recurring Bill' | 'Reminder' | 'Household Task'
+
+export type PlannerItemStatus = 'Pending' | 'Scheduled' | 'Done' | 'Skipped'
+
+export interface PlannerItem {
+  id: string
+  title: string
+  type: PlannerItemType
+  category: string
+  amount?: number
+  dueDate?: string
+  status: PlannerItemStatus
+  tags: string[]
+  notes: string
+  quantity?: number
+  store?: string
+  completedAt?: string
 }
 
-export interface PlannerNote {
-	id: string
-	title: string
-	body: string
-	tag: string
-	favorite: boolean
+export type TransactionType = 'Expense' | 'Payment' | 'Income' | 'Transfer'
+
+export type TransactionStatus = 'Pending' | 'Paid' | 'Scheduled'
+
+export interface Transaction {
+  id: string
+  accountId: string
+  title: string
+  amount: number
+  date: string
+  type: TransactionType
+  category: string
+  status: TransactionStatus
+  notes?: string
+  merchant?: string
+  tags: string[]
+  linkedPlannerItemId?: string
 }
 
-export interface ShoppingItem {
-	id: string
-	name: string
-	quantity: number
-	store: string
-	done: boolean
+export type DashboardWidgetKind = 'balance' | 'upcoming-payments' | 'monthly-spend' | 'shopping-summary' | 'budget-overview'
+
+export interface DashboardWidget {
+  id: string
+  title: string
+  caption: string
+  kind: DashboardWidgetKind
+  accent: string
 }
 
-export interface PlannerState {
-	theme: ThemeMode
-	featuredVisualId: string
-	tasks: PlannerTask[]
-	habits: PlannerHabit[]
-	notes: PlannerNote[]
-	shopping: ShoppingItem[]
+export interface HubState {
+  theme: ThemeMode
+  accounts: Account[]
+  plannerItems: PlannerItem[]
+  transactions: Transaction[]
+  dashboardWidgets: DashboardWidget[]
 }

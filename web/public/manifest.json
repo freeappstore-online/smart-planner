@@ -1,12 +1,12 @@
 {
   "name": "Smart Planner",
   "short_name": "Smart Planner",
-  "description": "Offline-first planner and notes app for FreeAppStore",
+  "description": "Offline-first planning workspace for FreeAppStore",
   "start_url": "/",
   "display": "standalone",
   "min_viewport_width": 360,
-  "background_color": "#f5efe6",
-  "theme_color": "#f5efe6",
+  "background_color": "#f8fafc",
+  "theme_color": "#2563eb",
   "orientation": "any",
   "icons": [
     {
