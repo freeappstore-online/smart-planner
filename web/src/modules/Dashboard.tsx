@@ -59,7 +59,7 @@ export function Dashboard({ onNavigate }: ModuleProps) {
             </button>
           </div>
 
-          <div className="mt-6 rounded-3xl border border-(--line) bg-[linear-gradient(135deg,color-mix(in_srgb,var(--accent)_12%,white),color-mix(in_srgb,var(--cyan)_10%,white))] p-4 sm:p-5">
+          <div className="mt-6 rounded-3xl border border-(--line) bg-[linear-gradient(135deg,color-mix(in_srgb,var(--accent)_12%,var(--paper)),color-mix(in_srgb,var(--cyan)_10%,var(--paper)))] p-4 sm:p-5">
             <div className="flex items-center justify-between gap-4">
               <div className="min-w-0 flex-1">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-(--muted) wrap-break-word">Budget snapshot</p>
@@ -84,7 +84,7 @@ export function Dashboard({ onNavigate }: ModuleProps) {
           ) : (
             <div className="space-y-3">
               {insights.upcomingPayments.map((item) => (
-                <div key={item.id} className="flex min-w-0 flex-wrap items-center justify-between gap-4 rounded-[1.25rem] border border-(--line) bg-white/70 p-4">
+                <div key={item.id} className="flex min-w-0 flex-wrap items-center justify-between gap-4 rounded-[1.25rem] border border-(--line) bg-[color-mix(in_srgb,var(--panel)_88%,var(--paper))] p-4">
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-center gap-2">
                       <h4 className="max-w-full wrap-break-word font-semibold text-(--ink)">{item.title}</h4>
@@ -109,7 +109,7 @@ export function Dashboard({ onNavigate }: ModuleProps) {
           ) : (
             <div className="space-y-3">
               {insights.recentExpenses.map((transaction) => (
-                <div key={transaction.id} className="flex min-w-0 items-center justify-between gap-4 rounded-[1.25rem] border border-(--line) bg-white/70 p-4">
+                <div key={transaction.id} className="flex min-w-0 items-center justify-between gap-4 rounded-[1.25rem] border border-(--line) bg-[color-mix(in_srgb,var(--panel)_88%,var(--paper))] p-4">
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-center gap-2">
                       <h4 className="max-w-full wrap-break-word font-semibold text-(--ink)">{transaction.title}</h4>
@@ -136,7 +136,7 @@ export function Dashboard({ onNavigate }: ModuleProps) {
           ) : (
             <div className="space-y-3">
               {insights.shoppingItems.map((item) => (
-                <div key={item.id} className="flex min-w-0 items-center justify-between gap-4 rounded-[1.25rem] border border-(--line) bg-white/70 p-4">
+                <div key={item.id} className="flex min-w-0 items-center justify-between gap-4 rounded-[1.25rem] border border-(--line) bg-[color-mix(in_srgb,var(--panel)_88%,var(--paper))] p-4">
                   <div className="min-w-0 flex-1">
                     <div className="flex flex-wrap items-center gap-2">
                       <h4 className="max-w-full wrap-break-word font-semibold text-(--ink)">{item.title}</h4>
@@ -157,7 +157,7 @@ export function Dashboard({ onNavigate }: ModuleProps) {
         <Card className="p-5 sm:p-6">
           <SectionHeader eyebrow="Momentum" title="Household pulse" description="A compact summary of what is active right now." />
           <div className="space-y-3">
-            <div className="rounded-[1.25rem] border border-(--line) bg-white/70 p-4">
+            <div className="rounded-[1.25rem] border border-(--line) bg-[color-mix(in_srgb,var(--panel)_88%,var(--paper))] p-4">
               <div className="flex items-center justify-between gap-4">
                 <span className="text-sm text-(--muted)">Next due item</span>
                 <Badge color="warning">{insights.upcomingPayments[0]?.type ?? '—'}</Badge>
@@ -165,7 +165,7 @@ export function Dashboard({ onNavigate }: ModuleProps) {
               <p className="mt-2 wrap-break-word font-display text-xl font-semibold text-(--ink) sm:text-2xl">{insights.upcomingPayments[0]?.title ?? 'Nothing due'}</p>
               <p className="mt-1 wrap-break-word text-sm text-(--muted)">{formatRelativeDays(insights.upcomingPayments[0]?.dueDate)}</p>
             </div>
-            <div className="rounded-[1.25rem] border border-(--line) bg-white/70 p-4">
+            <div className="rounded-[1.25rem] border border-(--line) bg-[color-mix(in_srgb,var(--panel)_88%,var(--paper))] p-4">
               <div className="flex items-center justify-between gap-4">
                 <span className="text-sm text-(--muted)">Most recent transaction</span>
                 <Badge color="muted">{transactions[0]?.status ?? '—'}</Badge>

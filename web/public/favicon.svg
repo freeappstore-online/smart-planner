@@ -1,4 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#059669"/>
-  <text x="16" y="22" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="white">S</text>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64">
+      <stop stop-color="#2D7FF9"></stop>
+      <stop offset="1" stop-color="#7B61FF"></stop>
+    </linearGradient>
+
+    <linearGradient id="book" x1="14" y1="12" x2="50" y2="52">
+      <stop stop-color="#1E5EFF"></stop>
+      <stop offset="1" stop-color="#7B61FF"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="64" height="64" rx="16" fill="url(#bg)"></rect>
+
+  <!-- Book -->
+  <rect x="15" y="12" width="34" height="40" rx="6" fill="url(#book)"></rect>
+  <rect x="15" y="12" width="8" height="40" rx="6" fill="#1B4DCC"></rect>
+
+  <!-- Rings -->
+  <rect x="11" y="18" width="6" height="2.5" rx="1.2" fill="#0B2E8A"></rect>
+  <rect x="11" y="27" width="6" height="2.5" rx="1.2" fill="#0B2E8A"></rect>
+  <rect x="11" y="36" width="6" height="2.5" rx="1.2" fill="#0B2E8A"></rect>
+
+  <!-- Tabs -->
+  <rect x="49" y="21" width="4" height="7" rx="1.5" fill="#20D6D2"></rect>
+  <rect x="49" y="30" width="4" height="7" rx="1.5" fill="#64E75A"></rect>
+  <rect x="49" y="39" width="4" height="7" rx="1.5" fill="#FFC83D"></rect>
+
+  <!-- Page -->
+  <rect x="19" y="43" width="25" height="5" rx="2" fill="white"></rect>
+
+  <!-- Check -->
+  <path d="M26 31L31 36L40 26" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
 </svg>

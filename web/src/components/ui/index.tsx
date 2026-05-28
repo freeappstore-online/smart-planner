@@ -53,15 +53,15 @@ export function Badge({
 }
 
 export function Input({ className = '', ...props }: React.InputHTMLAttributes<HTMLInputElement>) {
-  return <input className={`w-full rounded-2xl border border-(--line) bg-white/70 px-4 py-3 text-(--ink) placeholder:text-(--muted) shadow-[0_1px_0_rgba(255,255,255,0.5)] outline-none transition focus:border-[color-mix(in_srgb,var(--accent)_40%,var(--line))] focus:ring-4 focus:ring-(--accent)/10 ${className}`} {...props} />
+  return <input className={`w-full rounded-2xl border border-(--line) bg-[color-mix(in_srgb,var(--panel)_88%,var(--paper))] px-4 py-3 text-(--ink) placeholder:text-(--muted) shadow-[0_1px_0_rgba(255,255,255,0.4)] outline-none transition focus:border-[color-mix(in_srgb,var(--accent)_40%,var(--line))] focus:ring-4 focus:ring-(--accent)/10 ${className}`} {...props} />
 }
 
 export function Select({ className = '', children, ...props }: React.SelectHTMLAttributes<HTMLSelectElement>) {
-  return <select className={`w-full rounded-2xl border border-(--line) bg-white/70 px-4 py-3 text-(--ink) shadow-[0_1px_0_rgba(255,255,255,0.5)] outline-none transition focus:border-[color-mix(in_srgb,var(--accent)_40%,var(--line))] focus:ring-4 focus:ring-(--accent)/10 ${className}`} {...props}>{children}</select>
+  return <select className={`w-full rounded-2xl border border-(--line) bg-[color-mix(in_srgb,var(--panel)_88%,var(--paper))] px-4 py-3 text-(--ink) shadow-[0_1px_0_rgba(255,255,255,0.4)] outline-none transition focus:border-[color-mix(in_srgb,var(--accent)_40%,var(--line))] focus:ring-4 focus:ring-(--accent)/10 ${className}`} {...props}>{children}</select>
 }
 
 export function Textarea({ className = '', ...props }: React.TextareaHTMLAttributes<HTMLTextAreaElement>) {
-  return <textarea className={`min-h-30 w-full resize-y rounded-2xl border border-(--line) bg-white/70 px-4 py-3 text-(--ink) placeholder:text-(--muted) shadow-[0_1px_0_rgba(255,255,255,0.5)] outline-none transition focus:border-[color-mix(in_srgb,var(--accent)_40%,var(--line))] focus:ring-4 focus:ring-(--accent)/10 ${className}`} {...props} />
+  return <textarea className={`min-h-30 w-full resize-y rounded-2xl border border-(--line) bg-[color-mix(in_srgb,var(--panel)_88%,var(--paper))] px-4 py-3 text-(--ink) placeholder:text-(--muted) shadow-[0_1px_0_rgba(255,255,255,0.4)] outline-none transition focus:border-[color-mix(in_srgb,var(--accent)_40%,var(--line))] focus:ring-4 focus:ring-(--accent)/10 ${className}`} {...props} />
 }
 
 export function Modal({ isOpen, onClose, title, children, footer }: { isOpen: boolean; onClose: () => void; title: string; children: React.ReactNode; footer?: React.ReactNode }) {
@@ -70,13 +70,13 @@ export function Modal({ isOpen, onClose, title, children, footer }: { isOpen: bo
   return (
     <div className="fixed inset-0 z-50 flex items-end justify-center p-3 sm:items-center sm:p-6">
       <div className="absolute inset-0 bg-slate-950/45 backdrop-blur-md animate-fade-in" onClick={onClose} />
-      <div className="relative w-full max-w-2xl overflow-hidden rounded-4xl border border-white/40 bg-[color-mix(in_srgb,var(--panel)_82%,white)] p-5 shadow-[0_28px_80px_rgba(15,23,42,0.28)] animate-slide-up sm:p-6">
+      <div className="relative w-full max-w-2xl overflow-hidden rounded-4xl border border-(--line) bg-[color-mix(in_srgb,var(--panel)_88%,var(--paper))] p-5 shadow-[0_28px_80px_rgba(15,23,42,0.28)] animate-slide-up sm:p-6">
         <div className="mb-6 flex items-center justify-between gap-4">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-(--muted)">Smart Planner</p>
             <h2 className="mt-1 font-display text-3xl font-semibold text-(--ink)">{title}</h2>
           </div>
-          <button onClick={onClose} className="rounded-full border border-(--line) bg-white/70 p-3 text-(--muted) transition hover:border-[color-mix(in_srgb,var(--accent)_30%,var(--line))] hover:text-(--ink)">
+          <button onClick={onClose} className="rounded-full border border-(--line) bg-[color-mix(in_srgb,var(--panel)_88%,var(--paper))] p-3 text-(--muted) transition hover:border-[color-mix(in_srgb,var(--accent)_30%,var(--line))] hover:text-(--ink)">
             ✕
           </button>
         </div>

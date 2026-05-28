@@ -100,7 +100,7 @@ export function Settings({ onNavigate }: ModuleProps) {
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-(--muted)">Theme preview</p>
                 <h3 className="mt-2 wrap-break-word font-display text-2xl font-semibold text-(--ink)">{mode.label}</h3>
               </div>
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-(--line) bg-white/80 text-(--navy)">{mode.icon}</div>
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-(--line) bg-[color-mix(in_srgb,var(--panel)_88%,var(--paper))] text-(--navy)">{mode.icon}</div>
             </div>
             <p className="mt-3 min-w-0 wrap-break-word text-sm leading-6 text-(--muted)">{mode.description}</p>
             <Button className="mt-auto w-full" variant={theme === mode.id ? 'primary' : 'outline'} onClick={() => setTheme(mode.id)}>
