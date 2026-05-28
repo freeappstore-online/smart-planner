@@ -390,6 +390,7 @@ function HubApp() {
               <p className="text-sm font-semibold text-(--ink)">Connected account</p>
               <ProfileMenu app={fas} showThemeToggle={false} />
             </div>
+            <p className="mt-3 text-xs text-(--muted)">Built for <a href="https://freeappstore.online" target="_blank" rel="noopener noreferrer" className="underline">freeappstore.online</a></p>
           </div>
         </Card>
       </aside>
