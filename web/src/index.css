@@ -90,7 +90,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Fraunces', ui-serif, Georgia, Cambria, serif;
+  font-family: 'Fraunces', ui-serif, Georgia, serif;
 }
 
 #root {
@@ -110,7 +110,7 @@ button {
 }
 
 .font-display {
-  font-family: 'Fraunces', ui-serif, Georgia, Cambria, serif;
+  font-family: 'Fraunces', ui-serif, Georgia, serif;
 }
 
 .app-shell {
